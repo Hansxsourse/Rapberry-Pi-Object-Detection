@@ -19,10 +19,15 @@ pip3 install numpy
 python3 det.py
 ```
 It will print the `r` of the first circle in the webcam if circle exist, or print `bad` if doesn't exist.
+
 And return `high` to GPIO port `2` if the circle's r is greater than a value
+
 Only works with 1 circle yet(as we only need to carry one ball object in our presentation)
 
 ### Feture
 do some de-noisy methods for the input source
+
 optimizations
+
+add auto run script to environment 
 
