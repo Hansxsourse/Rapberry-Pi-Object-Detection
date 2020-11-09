@@ -57,7 +57,7 @@ from utils import visualization_utils as vis_util
 ## p link to rpi
 
 IP = "127.0.0.1"
-port = 9996 
+port = 9990
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 s.bind((IP,port))
 s.listen(1)
@@ -246,21 +246,31 @@ elif camera_type == 'usb':
         bbx_height = (bbox[3] - bbox[1]) * IM_HEIGHT
         area = bbx_height*bbx_width
         est_distance = 60000/area
-        print(est_distance)
+        print(np.squeeze(scores)[0])
         # left_bottom = box[0] * IM_WIDTH
         # left_top = box[IM_HEIGHT
         # area = box[1] - box
         #data = conn.recv(1024)
         #data = data.decode()
-        if est_distance <= 13:
-            holder += 1
-            if holder >= 3:
-                send = "pick"
-                conn.sendall(send.encode())
-                holder = 0
+        if np.squeeze(scores)[0] >= 0.9:
+            send = "exist"
+            conn.sendall(send.encode())
+            send = ""
         else:
             send = "noball"
             conn.sendall(send.encode())
+            send = ""
+        if est_distance <= 13:
+            holder += 1
+            if holder >= 3:
+                sends = "pick"
+                conn.sendall(sends.encode())
+                holder = 0
+                sends = ""
+        else:
+            sends = "far"
+            conn.sendall(sends.encode())
+            sends = ""
         # Press 'q' to quit
         if cv2.waitKey(1) == ord('q'):
             #print(np.squeeze(scores))
