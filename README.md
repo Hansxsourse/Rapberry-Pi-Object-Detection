@@ -1,5 +1,16 @@
 # Elec1601-proj-object-detection
 
+## Reference
+[Tutorial to set up TensorFlow Object Detection API on the Raspberry Pi](https://github.com/EdjeElectronics/TensorFlow-Object-Detection-on-the-Raspberry-Pi#6-detect-objects)
+
+[How To Train an Object Detection Classifier for Multiple Objects Using TensorFlow (GPU) on Windows 10](https://github.com/EdjeElectronics/TensorFlow-Object-Detection-API-Tutorial-Train-Multiple-Objects-Windows-10)
+
+[TypeError: export_inference_graph() got an unexpected keyword argument 'use_side_inputs' #8711](https://github.com/tensorflow/models/issues/8711)
+
+[DeepPiCar](https://github.com/dctian/DeepPiCar)
+
+
+
 ## Legacy Opencv Pingpong Detection
 
 ### Introduction
