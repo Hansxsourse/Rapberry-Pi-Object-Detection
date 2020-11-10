@@ -34,3 +34,19 @@ optimizations
 add auto run script to environment 
 
 ## Deep Learning Pingpong Object Detection
+
+### Introduction
+
+This is a deep learning based way to detect the object pinpong and caculate the estimate distance by bounding box area.
+
+### Requirement
+`Tensorflow 1.14.0`
+
+`Tensorflow Object Detection API`
+
+### Making Dataset for training model
+
+Refer [this repo](https://github.com/EdjeElectronics/TensorFlow-Object-Detection-API-Tutorial-Train-Multiple-Objects-Windows-10) to make sure you have collect your own data and annatated them, also generate correct TF Record file and label maps. Or just use my example dataset upload in the folder `data` or just use files in `training` folder.
+
+### Training Faster-RCNN Model
+
