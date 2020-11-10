@@ -9,7 +9,7 @@
 
 [DeepPiCar](https://github.com/dctian/DeepPiCar)
 
-
+[TensorFlow Object Detection API](https://github.com/tensorflow/models/tree/master/research/object_detection)
 
 ## Legacy Opencv Pingpong Detection
 
@@ -77,7 +77,7 @@ After training process done, we need to generate inference graph `.pb` file from
 
 It might not working in the latest api file, refer to [this issue post](https://github.com/tensorflow/models/issues/8711#issuecomment-647141998), we can download old version of `export_inference_graph.py` or use `export_old.py` in my repo by:
 
-`python export_old.py --input_type image_tensor --pipeline_config_path training/faster_rcnn_inception_v2_pets.config --checkpoint_path training/model.ckpt-XXXX(THE STEP NUMBER) --inference_graph_path output_inference_graph.pb`
+`python export_old.py --input_type image_tensor --pipeline_config_path training/faster_rcnn_inception_v2_pets.config --checkpoint_path training/model.ckpt-XXXX(THE BEST STEP NUMBER) --inference_graph_path output_inference_graph.pb`
 
 WELL DONE FOR MODELING!!!
 
