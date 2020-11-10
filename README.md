@@ -1,5 +1,7 @@
 # Elec1601-proj-object-detection
 
+## Legacy Opencv Pingpong Detection
+
 ### Introduction
 It contributed a circle detection method on Raspberry Pi by using Hough circle detection, done by OpenCV
 
@@ -31,3 +33,4 @@ optimizations
 
 add auto run script to environment 
 
+## Deep Learning Pingpong Object Detection
