@@ -69,15 +69,21 @@ Go to folder `models/research/object_detection/samples/configs` to copy file `fa
 
 In some version of tensorflow object detection api, the `train.py` file has been changed, so please copy `train.py` from folder `legacy` to your working path.
 
-`python train.py --logtostderr --train_dir=training/ --pipeline_config_path=training/faster_rcnn_inception_v2_pets.config`
+```bash
+python train.py --logtostderr --train_dir=training/ --pipeline_config_path=training/faster_rcnn_inception_v2_pets.config
+```
 
 After training process done, we need to generate inference graph `.pb` file from the training out put. 
 
-`python export_inference_graph.py --input_type image_tensor --pipeline_config_path training/faster_rcnn_inception_v2_pets.config --trained_checkpoint_prefix training/model.ckpt-XXXX --output_directory inference_graph`
+```bash
+python export_inference_graph.py --input_type image_tensor --pipeline_config_path training/faster_rcnn_inception_v2_pets.config --trained_checkpoint_prefix training/model.ckpt-XXXX --output_directory inference_graph
+```
 
 It might not working in the latest api file, refer to [this issue post](https://github.com/tensorflow/models/issues/8711#issuecomment-647141998), we can download old version of `export_inference_graph.py` or use `export_old.py` in my repo by:
 
-`python export_old.py --input_type image_tensor --pipeline_config_path training/faster_rcnn_inception_v2_pets.config --checkpoint_path training/model.ckpt-XXXX(THE BEST STEP NUMBER) --inference_graph_path output_inference_graph.pb`
+```bash
+python export_old.py --input_type image_tensor --pipeline_config_path training/faster_rcnn_inception_v2_pets.config --checkpoint_path training/model.ckpt-XXXX(THE BEST STEP NUMBER) --inference_graph_path output_inference_graph.pb
+```
 
 WELL DONE FOR MODELING!!!
 
