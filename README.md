@@ -48,5 +48,31 @@ This is a deep learning based way to detect the object pinpong and caculate the 
 
 Refer [this repo](https://github.com/EdjeElectronics/TensorFlow-Object-Detection-API-Tutorial-Train-Multiple-Objects-Windows-10) to make sure you have collect your own data and annatated them, also generate correct TF Record file and label maps. Or just use my example dataset upload in the folder `data` or just use files in `training` folder.
 
-### Training Faster-RCNN Model
+### Training Faster-RCNN-Inception_V2 Model Using Trained Weights
+
+#### Configs
+
+Go to folder `models/research/object_detection/samples/configs` to copy file `faster_rcnn_inception_v2_pets.config` to folder `object_detection/training/`. Then edit configs for number of class to your own data classes, also config the path of data and label maps. Important to modify the training steps, it is enough for me to train my data for 2000 steps, which you can decide by your self to avoid overfitting and underfitting depends on your data and etc.
+
+#### Training
+
+In some version of tensorflow object detection api, the `train.py` file has been changed, so please copy `train.py` from folder `legacy` to your working path.
+
+`python train.py --logtostderr --train_dir=training/ --pipeline_config_path=training/faster_rcnn_inception_v2_pets.config`
+
+After training process done, we need to generate inference graph `.pb` file from the training out put. 
+
+`python export_inference_graph.py --input_type image_tensor --pipeline_config_path training/faster_rcnn_inception_v2_pets.config --trained_checkpoint_prefix training/model.ckpt-XXXX --output_directory inference_graph`
+
+It might not working in the latest api file, refer to [this issue post](https://github.com/tensorflow/models/issues/8711#issuecomment-647141998), we can download old version of `export_inference_graph.py` or use `export_old.py` in my repo by:
+
+`python export_old.py --input_type image_tensor --pipeline_config_path training/faster_rcnn_inception_v2_pets.config --checkpoint_path training/model.ckpt-XXXX(THE STEP NUMBER) --inference_graph_path output_inference_graph.pb`
+
+WELL DONE FOR MODELING!!!
+
+### Inference by Webcam on Raspberry Pi
+
+to be continued
+
+
 
