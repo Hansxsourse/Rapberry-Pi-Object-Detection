@@ -1,6 +1,6 @@
 # Raspberry Pi Object Detection
 
-![Robot Overview](https://github.com/Hansxsourse/Elec1601-proj-object-detection/blob/main/image/photo_2020-11-18_23-01-44.jpg)
+![Robot Overview](https://github.com/Hansxsourse/Rapberry-Pi-Object-Detection/blob/main/image/photo_2020-11-18_23-01-44.jpg)
 
 ## Reference
 [Tutorial to set up TensorFlow Object Detection API on the Raspberry Pi](https://github.com/EdjeElectronics/TensorFlow-Object-Detection-on-the-Raspberry-Pi#6-detect-objects)
@@ -74,7 +74,7 @@ In some version of tensorflow object detection api, the `train.py` file has been
 ```bash
 python train.py --logtostderr --train_dir=training/ --pipeline_config_path=training/faster_rcnn_inception_v2_pets.config
 ```
-![Training log](https://github.com/Hansxsourse/Elec1601-proj-object-detection/blob/main/image/Training_Progress.png)
+![Training log](https://github.com/Hansxsourse/Rapberry-Pi-Object-Detection/blob/main/image/Training_Progress.png)
 
 
 After training process done, we need to generate inference graph `.pb` file from the training out put. 
@@ -95,7 +95,7 @@ WELL DONE FOR MODELING!!!
 
 I tried both low epoch and high epoch number, because the super small size of my pingpong dataset and we do not build a strong metric, it will be easily overfit!!! Like the picture below, it recognize my Google Home mini speaker as a pingpong.
 
-![Overfit](https://github.com/Hansxsourse/Elec1601-proj-object-detection/blob/main/image/Screenshot%20from%202020-11-09%2001-07-46.png)
+![Overfit](https://github.com/Hansxsourse/Rapberry-Pi-Object-Detection/blob/main/image/Screenshot%20from%202020-11-09%2001-07-46.png)
 
 
 ### Inference by Webcam on Raspberry Pi
