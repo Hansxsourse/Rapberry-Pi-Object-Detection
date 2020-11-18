@@ -1,4 +1,4 @@
-# Elec1601-proj-object-detection
+# Raspberry Pi Object Detection
 
 ![Robot Overview](https://github.com/Hansxsourse/Elec1601-proj-object-detection/blob/main/image/photo_2020-11-18_23-01-44.jpg)
 
