@@ -89,7 +89,17 @@ WELL DONE FOR MODELING!!!
 
 ### Inference by Webcam on Raspberry Pi
 
-to be continued
+####  Sending Video FLow to Server
+VLC is a good tool to send the flow with bandwidth efficiency. But when we using ffmpeg to encode the video on raspberry pi and decode on server, it caused a significant latency. So what I finally choose is the package `motion`, which is a tool with much much lower latency.
+
+BTW, if your raspberry pi and server network environment do not have a public ip address, I suggest using `frp` by config clints both on raspberry pi and server, also config a cloud server with server `frp` like `Google Cloud`. Btw again, `ngrok` is a easier way to get, but you do need worry about the bandwidth.
+
+#### Start Inference and Get the Feedback by GPIOs
+Easily run `python3 rpi.py` after the server's `Object_detection_picamera.py` is running. They should communicate the feedback by a python socket using a independent port.
+
+As my seeting, pin `5` for Raspberry Pi 4th Gen will returen a high signal when detected a pingpong, pin `6` will return another higgh signal when the distance is suitable to pick up the ball. Then we can connet these two pin to the rebot controller like arduino to control the pick up arm using server motor. 
+
+
 
 
 
