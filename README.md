@@ -94,6 +94,7 @@ WELL DONE FOR MODELING!!!
 #### Try to Avoid Overfit
 
 I tried both low epoch and high epoch number, because the super small size of my pingpong dataset and we do not build a strong metric, it will be easily overfit!!! Like the picture below, it recognize my Google Home mini speaker as a pingpong.
+
 ![Overfit](https://github.com/Hansxsourse/Elec1601-proj-object-detection/blob/main/image/Screenshot%20from%202020-11-09%2001-07-46.png)
 
 
