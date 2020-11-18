@@ -1,8 +1,6 @@
 # Elec1601-proj-object-detection
 
-<a href="url"><img src="https://github.com/Hansxsourse/Elec1601-proj-object-detection/blob/main/image/robot.jpg" align="center" height="720" width="480" ></a>
-
-![Robot Overview](https://github.com/Hansxsourse/Elec1601-proj-object-detection/blob/main/image/robot.jpg)
+![Robot Overview](https://github.com/Hansxsourse/Elec1601-proj-object-detection/blob/main/image/photo_2020-11-18_23-01-44.jpg)
 
 ## Reference
 [Tutorial to set up TensorFlow Object Detection API on the Raspberry Pi](https://github.com/EdjeElectronics/TensorFlow-Object-Detection-on-the-Raspberry-Pi#6-detect-objects)
