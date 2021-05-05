@@ -114,4 +114,4 @@ As my setting, pin `5` for Raspberry Pi 4th Gen will returen a high signal when 
 
 ## Author
 
-[Lehan Yang](https://www.xsourse.cc/), The University of Sydney
+[Lehan Yang](https://bio.lehanyang.info/), The University of Sydney
